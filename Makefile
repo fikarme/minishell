@@ -65,4 +65,4 @@ test: all
 re: fclean all
 re2: clean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re re2 run test

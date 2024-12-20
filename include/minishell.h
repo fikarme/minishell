@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akdemir <akdemir@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 12:13:48 by akdemir           #+#    #+#             */
-/*   Updated: 2024/07/01 16:31:39 by akdemir          ###   ########.fr       */
+/*   Created: 2024/07/04 13:52:23 by akdemir           #+#    #+#             */
+/*   Updated: 2024/07/04 13:52:24 by akdemir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,7 @@ typedef struct s_shell
 	char			**env;
 	int				er_status;
 	int				ex_status;
+	int				ex_ex_status;
 	int				l_br;
 	int				r_br;
 	int				br_type;
@@ -165,6 +166,7 @@ int				ft_exist(char *str, char c);
 
 //others
 void			initalizer(t_shell *shell, char **env);
+void			printwelcome(void);
 void			start_program(t_shell *shell);
 
 //token func
@@ -335,5 +337,6 @@ void			ft_parse(t_shell *shell);
 void			ft_execpre(t_shell *shell);
 void			cont_comnd(t_put_cmd	*local, t_shell *shell);
 void			secondloop(t_put_cmd *local);
+void			pipe_control(t_shell *shell);
 
 #endif

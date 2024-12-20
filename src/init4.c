@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init4.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akdemir <akdemir@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/04 13:48:23 by akdemir           #+#    #+#             */
+/*   Updated: 2024/07/04 13:48:24 by akdemir          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/minishell.h"
 
 t_parse_node	*get_next_node(t_parse_node *current, t_parse_node **prev)
@@ -42,6 +54,7 @@ void	ft_parse(t_shell *shell)
 	quote_remove(shell);
 	delete_null_nodes(shell);
 	node_control(shell);
+	pipe_control(shell);
 }
 
 void	ft_execpre(t_shell *shell)

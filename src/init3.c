@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init3.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akdemir <akdemir@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/04 13:48:25 by akdemir           #+#    #+#             */
+/*   Updated: 2024/07/04 13:48:26 by akdemir          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/minishell.h"
 
 void	shell_readline2(t_shell *shell)
@@ -29,6 +41,7 @@ void	shell_readline2(t_shell *shell)
 void	shell_readline(t_shell *shell)
 {
 	shell->cmd_line = readline("minishell ~ ");
+	shell->ex_ex_status = shell->ex_status;
 	shell->c_pipe = 0;
 	shell->ex_status = 0;
 	shell->er_status = 0;

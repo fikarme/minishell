@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   dollar_utils.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akdemir <akdemir@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/04 13:49:03 by akdemir           #+#    #+#             */
+/*   Updated: 2024/07/04 13:49:04 by akdemir          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/minishell.h"
 
 void	env_dollar(t_shell *shell, char *str)
@@ -50,7 +62,7 @@ void	special_dodollar(t_shell *shell, char *str)
 		}
 		else
 		{
-			tmp = ft_itoa(shell->ex_status);
+			tmp = ft_itoa(shell->ex_ex_status);
 			add_parse_subnode(shell, tmp);
 			free(tmp);
 		}

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   heredoc.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akdemir <akdemir@student.42istanbul.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/04 13:48:30 by akdemir           #+#    #+#             */
+/*   Updated: 2024/07/04 13:48:31 by akdemir          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/minishell.h"
 
 void	ft_redir_dless(t_exec_node *head, t_red *head_redir, t_shell *shell)
@@ -42,7 +54,6 @@ void	ft_heredoc(char *eof, int fd)
 		if ((ft_strncmp(line, eof, ft_strlen(eof)) == 0)
 			&& ft_strlen(line) == ft_strlen(eof))
 		{
-			write(1, "\033[A", 3);
 			free(line);
 			break ;
 		}
